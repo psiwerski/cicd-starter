@@ -34,6 +34,9 @@ jobs:
       - name: 'Use gcloud CLI to build image'
         run: 'gcloud builds submit --tag us-central1-docker.pkg.dev/notely-407320/notely-ar-repo/siwerski/notely:latest .'
 
+      - name: Install Goose
+        run:  go get -u github.com/pressly/goose/cmd/goose
+
       - name: Migration
         run: ./scripts/migrateup.sh
 
