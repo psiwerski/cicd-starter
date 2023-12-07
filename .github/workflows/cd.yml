@@ -35,6 +35,7 @@ jobs:
         run: 'gcloud builds submit --tag us-central1-docker.pkg.dev/notely-407320/notely-ar-repo/siwerski/notely:latest .'
 
       - name: Install Goose
+        # comment out if you don't use goose
         run:  go install github.com/pressly/goose/v3/cmd/goose@latest
 
       - name: Migration
